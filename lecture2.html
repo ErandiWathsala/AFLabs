@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World</title>
+</head>
+<body>
+<script>
+    //first example
+    // function  Vehicle(){
+    //     this.type= "Toyota";
+    // }
+    //
+    // var vehicle = new Vehicle();
+    // console.log(vehicle.type);
+
+
+    //second example
+    // function Vehicle() {
+    //     this.type="TOYOTA"
+    //     this.getType = function (){
+    //         return this.type;
+    //     }
+    // }
+    //
+    // var vehicle = new Vehicle();
+    // console.log(vehicle.getType());
+
+    //Third example
+    // function Vehicle(){
+    //     this.type = "Toyota"
+    // }
+    // Vehicle.prototype.getType = function (){
+    //     return this.type;
+    // }
+    //
+    // var vehicle = new Vehicle();
+    // console.log(vehicle.getType());
+
+    //example 4
+    // function Vehicle(type){
+    //     this.type = type;
+    // }
+    //
+    // Vehicle.prototype.getType = function (){
+    //     return this.type;
+    // }
+    //
+    // function Car(type){
+    //     Vehicle.call(this,type);
+    // }
+    //
+    // Car.prototype = Object.create(Vehicle.prototype);
+    // Car.prototype.constructor = Car;
+    //
+    // var car = new Car('Audi');
+    // console.log(car.getType());
+    // console.log(car);
+
+    //example 5
+    // var name = 'David';
+    // function printName(){
+    //     console.log(this.name);
+    // }
+    //
+    // printName();
+    // console.log(this);
+
+    //example 6
+    // var name = 'David';
+    // function printName() {
+    //     console.log(this.name);
+    // }
+    // printName();
+    //
+    // var user = {
+    //     name : 'peter',
+    //     getName : printName
+    // }
+    // console.log(this);
+    // user.getName();
+
+    //example 7
+    var name = 'David';
+    function printName(){
+        console.log(this.name);
+    }
+
+    printName();
+
+    var user = {
+        name : 'peter',
+        getName : function (){
+            return function(){
+                console.log(this.name);
+            }
+        }
+    }
+
+</script>
+</body>
+</html>
